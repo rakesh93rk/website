@@ -2,46 +2,222 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Levi Interiors</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <title>Levi Interiors | Luxury Home Interiors | Premium Design Solutions</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
+<!-- ================= HEADER ================= -->
 <header>
-  <div class="logo">LEVI <span>INTERIORS</span></div>
-  <nav>
-    <a href="#gallery">Portfolio</a>
-    <a href="#estimate">Get Quote</a>
-  </nav>
+  <div class="container header-container">
+    <div class="logo-container">
+      <img src="assets/images/logo.png" alt="Levi Interiors Logo" class="logo-img">
+      <div class="logo-text">LEVI <span>INTERIORS</span></div>
+    </div>
+
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#how-it-works">Process</a></li>
+        <li><a href="#designs">Services</a></li>
+        <li><a href="#gallery">Portfolio</a></li>
+        <li><a href="#estimate">Estimate</a></li>
+        <li><a href="#cities">Cities</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-cta">
+      <a href="#estimate" class="btn">Book Consultation</a>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </div>
 </header>
 
-<section class="hero">
-  <h1>Premium Home Interiors</h1>
-  <p>Designed. Delivered. Perfected.</p>
-  <button id="openWhatsapp" class="btn">Get Detailed Quotation</button>
-</section>
+<!-- ================= WHATSAPP POPUP ================= -->
+<div class="whatsapp-popup">
+  <div class="whatsapp-options" id="whatsappOptions">
+    <button class="close-popup" id="closePopup"><i class="fas fa-times"></i></button>
+    <h3><i class="fab fa-whatsapp"></i> Contact Us on WhatsApp</h3>
 
-<section id="gallery">
-  <h2>Our Work</h2>
-  <div class="gallery">
-    <img src="kitchen-1.jpg" alt="Kitchen">
-    <img src="living-1.jpg" alt="Living Room">
-    <img src="bedroom-1.jpg" alt="Bedroom">
-    <img src="dining-1.jpg" alt="Dining">
+    <div class="whatsapp-option" data-contact="owner">
+      <div class="option-avatar owner"><i class="fas fa-crown"></i></div>
+      <div class="option-details">
+        <h4>Mr. Arun Reddy</h4>
+        <p>Founder & CEO</p>
+      </div>
+      <div class="option-cta"><i class="fab fa-whatsapp"></i></div>
+    </div>
+
+    <div class="whatsapp-option" data-contact="marketing">
+      <div class="option-avatar marketing"><i class="fas fa-bullhorn"></i></div>
+      <div class="option-details">
+        <h4>Mr. Shiva</h4>
+        <p>Marketing Head</p>
+      </div>
+      <div class="option-cta"><i class="fab fa-whatsapp"></i></div>
+    </div>
+  </div>
+
+  <div class="whatsapp-toggle" id="whatsappToggle">
+    <i class="fab fa-whatsapp"></i>
+  </div>
+</div>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <div class="container hero-container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fas fa-calendar-check"></i>
+        <span>45-Day Delivery Guarantee</span>
+      </div>
+
+      <h1>Design Your Dream Home <span>In 45 Days</span></h1>
+      <p>Premium home interiors with end-to-end execution and 10-year warranty.</p>
+
+      <div class="hero-btns">
+        <a href="#estimate" class="btn">
+          <i class="fas fa-calendar-alt"></i> Book Free Consultation
+        </a>
+        <a href="#gallery" class="btn btn-outline">
+          <i class="fas fa-images"></i> View Portfolio
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-number">4500+</div>
+          <div class="stat-label">Homes Transformed</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">98%</div>
+          <div class="stat-label">Client Satisfaction</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">10 Years</div>
+          <div class="stat-label">Warranty</div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<section id="estimate">
-  <h2>Request a Quote</h2>
-  <form id="leadForm">
-    <input type="text" placeholder="Name" required>
-    <input type="tel" placeholder="Phone" required>
-    <button type="submit">Submit</button>
-  </form>
+<!-- ================= CATEGORIES ================= -->
+<section class="categories" id="designs">
+  <div class="container">
+    <div class="section-title">
+      <h2>Luxury Interior Solutions</h2>
+      <p>Bespoke designs for every space</p>
+    </div>
+
+    <div class="categories-grid">
+      <div class="category-card">
+        <img src="assets/images/kitchen/kitchen-1.jpg">
+        <div class="category-overlay">
+          <h3>Modular Kitchens</h3>
+          <p>Smart storage & premium finishes</p>
+        </div>
+      </div>
+
+      <div class="category-card">
+        <img src="assets/images/bedroom/bedroom-1.jpg">
+        <div class="category-overlay">
+          <h3>Wardrobes</h3>
+          <p>Custom & walk-in wardrobes</p>
+        </div>
+      </div>
+
+      <div class="category-card">
+        <img src="assets/images/living/living-1.jpg">
+        <div class="category-overlay">
+          <h3>Living Rooms</h3>
+          <p>Luxury comfort & elegance</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<script src="script.js"></script>
+<!-- ================= GALLERY ================= -->
+<section class="design-gallery" id="gallery">
+  <div class="container">
+    <div class="section-title">
+      <h2>Portfolio Gallery</h2>
+      <p>Our completed interior projects</p>
+    </div>
+
+    <div class="gallery-filter">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="kitchen">Kitchen</button>
+      <button class="filter-btn" data-filter="living">Living</button>
+      <button class="filter-btn" data-filter="bedroom">Bedroom</button>
+      <button class="filter-btn" data-filter="dining">Dining</button>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item" data-category="kitchen">
+        <img src="assets/images/kitchen/kitchen-2.jpg">
+      </div>
+      <div class="gallery-item" data-category="living">
+        <img src="assets/images/living/living-2.jpg">
+      </div>
+      <div class="gallery-item" data-category="bedroom">
+        <img src="assets/images/bedroom/bedroom-2.jpg">
+      </div>
+      <div class="gallery-item" data-category="dining">
+        <img src="assets/images/dining/dining-1.jpg">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ESTIMATE ================= -->
+<section class="pricing-estimator" id="estimate">
+  <div class="container">
+    <div class="estimator-container">
+      <h2>Get Detailed Quote</h2>
+
+      <form id="costEstimator">
+        <div class="form-row">
+          <input class="form-control" id="name" placeholder="Full Name" required>
+          <input class="form-control" id="phone" placeholder="Phone Number" required>
+        </div>
+
+        <div class="form-row">
+          <input class="form-control" id="email" placeholder="Email" required>
+          <select class="form-control" id="city" required>
+            <option value="">Select Area</option>
+            <option>Uppal</option>
+            <option>Kompally</option>
+            <option>Balanagar</option>
+            <option>Ghatkesar</option>
+            <option>LB Nagar</option>
+          </select>
+        </div>
+
+        <button class="btn btn-secondary" type="submit">
+          <i class="fas fa-file-invoice-dollar"></i> Get Quote
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= JS ================= -->
+<script src="assets/js/script.js"></script>
+
 </body>
 </html>
