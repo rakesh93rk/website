@@ -1,0 +1,32 @@
+<?php
+session_start();
+if(!isset($_SESSION['admin'])){
+    header("Location: login.php");
+    exit;
+}
+include "../../config.php";
+
+$total = $conn->query("SELECT COUNT(*) total FROM leads")->fetch_assoc()['total'];
+$today = date("Y-m-d");
+$todayLeads = $conn->query(
+    "SELECT COUNT(*) total FROM leads WHERE DATE(created_at)='$today'"
+)->fetch_assoc()['total'];
+?>
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Admin Dashboard</h1>
+
+<p>Total Leads: <b><?= $total ?></b></p>
+<p>Today Leads: <b><?= $todayLeads ?></b></p>
+
+<ul>
+<li><a href="leads.php">Leads</a></li>
+<li><a href="projects.php">Projects</a></li>
+<li><a href="seo.php">SEO</a></li>
+<li><a href="analytics.php">Analytics</a></li>
+<li><a href="settings.php">Settings</a></li>
+<li><a href="logout.php">Logout</a></li>
+</ul>
+</body>
+</html>
