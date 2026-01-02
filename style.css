@@ -1,0 +1,8 @@
+
+body{margin:0;font-family:Arial,sans-serif;background:#fff;color:#222}
+header{display:flex;justify-content:space-between;padding:20px;background:#2A4B8C;color:#fff}
+.logo span{color:#D4AF37}
+.hero{text-align:center;padding:100px 20px;background:#f5f5f5}
+.btn{padding:15px 30px;background:#2A4B8C;color:#fff;border:none;cursor:pointer}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;padding:40px}
+.gallery img{width:100%;border-radius:10px}
